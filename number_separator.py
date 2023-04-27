@@ -11,7 +11,14 @@ even_numbers = []
 odd_numbers = []
 
 # iterate over each number in the list of numbers
+for num in numbers:
+    # check if the number is even or odd
+    if num % 2 == 0:
         # add the even number to the list of even numbers
+        even_numbers.append(num)
+    else:
         # add the odd number to the list of odd numbers
+        odd_numbers.append(num)
+
 # write the even numbers to the file "even.txt"
 # write the odd numbers to the file "odd.txt"
