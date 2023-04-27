@@ -22,12 +22,31 @@ for num in numbers:
 
 # write the even numbers to the file "even.txt"
 with open("even.txt", "w") as even_file:
-    even_file.write("\n".join(map(str, even_numbers)))
+        # write the table header
+    even_file.write("+------+-------+\n")
+    even_file.write("| Even | Count |\n")
+    even_file.write("+------+-------+\n")
+#    even_file.write("\n".join(map(str, even_numbers)))
+
+        # write each even number and its count to the table
+    for num in even_numbers:
+        count = numbers.count(num)
+        even_file.write("| {:^4} | {:^5} |\n".format(num, count))
+        even_file.write("+------+-------+\n")
 
 # write the odd numbers to the file "odd.txt"
 with open("odd.txt", "w") as odd_file:
-    odd_file.write("\n".join(map(str, odd_numbers)))
+        # write the table header
+    odd_file.write("+------+-------+\n")
+    odd_file.write("| Odd  | Count |\n")
+    odd_file.write("+------+-------+\n")
+#    odd_file.write("\n".join(map(str, odd_numbers)))
 
+    # write each odd number and its count to the table
+    for num in odd_numbers:
+        count = numbers.count(num)
+        odd_file.write("|  {:^3} | {:^5} |\n".format(num, count))
+        odd_file.write("+------+-------+\n")
 #close txt files
 input_file.close()
 even_file.close()
