@@ -21,4 +21,7 @@ for num in numbers:
         odd_numbers.append(num)
 
 # write the even numbers to the file "even.txt"
+with open("even.txt", "w") as even_file:
+    even_file.write("\n".join(map(str, even_numbers)))
+
 # write the odd numbers to the file "odd.txt"
